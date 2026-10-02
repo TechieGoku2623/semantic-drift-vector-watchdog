@@ -13,6 +13,14 @@
 | **Website** | https://github.com/TechieGoku2623/semantic-drift-vector-watchdog |
 | **Topics** | `python` `asyncio` `machine-learning` `embeddings` `drift-detection` `generative-ai` |
 
+## Watch the demo
+
+<p align="center">
+  <img src="docs/demo.gif" alt="Semantic Drift Vector Watchdog dashboard walkthrough" width="920"/>
+</p>
+
+Play the video: [docs/watch.html](docs/watch.html)
+
 ## The problem this solves
 
 An embedding stream can leave its baseline while every individual vector still looks well formed. A model swap, a bad batch, or a slow shift in prompts changes the geometry.

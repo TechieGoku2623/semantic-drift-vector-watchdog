@@ -2,6 +2,11 @@
 
 A high-throughput, low-latency asynchronous engine engineered to resolve silent centroid drift in 32-dimensional embedding windows by maintaining a Welford reference mean and declaring drift with a two-sided CUSUM on cosine distance.
 
+Website: https://github.com/TechieGoku2623/semantic-drift-vector-watchdog
+
+Topics: `python` `asyncio` `machine-learning` `embeddings` `drift-detection` `generative-ai`
+
+
 ## 🏗️ Systems Architecture & Event Topology
 
 `SemanticDriftVectorWatchdog` keeps a 32-wide reference centroid under an `asyncio.Lock`. `run(records)` validates a batch, scores each vector, updates a two-sided CUSUM, and returns a JSON-serializable dict: `cosine_distance`, `l2`, `cusum_pos`, `cusum_neg`, `drift`, and `centroid_updates`.
@@ -11,6 +16,8 @@ The in-process `asyncio.Queue` is the stand-in for Kafka topic `genai.embeddings
 `EngineKernelException` is the kernel fault. It is raised for an all-zero vector, a non-finite component, or a dimension other than 32, and the centroid is left unchanged.
 
 ## 📊 Core Visual Walkthrough & Engine Pipeline Flow
+
+![Terminal walkthrough](docs/assets/terminal-walkthrough.gif)
 
 ```
 records (N vectors, dim 32)

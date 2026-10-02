@@ -17,7 +17,17 @@ The in-process `asyncio.Queue` is the stand-in for Kafka topic `genai.embeddings
 
 ## 📊 Core Visual Walkthrough & Engine Pipeline Flow
 
-![Terminal walkthrough](docs/assets/terminal-walkthrough.gif)
+Engine run.
+
+![Engine run](docs/assets/terminal-walkthrough.gif)
+
+Benchmark harness.
+
+![Benchmark harness](docs/assets/benchmark-walkthrough.gif)
+
+Unit tests.
+
+![Unit tests](docs/assets/tests-walkthrough.gif)
 
 ```
 records (N vectors, dim 32)

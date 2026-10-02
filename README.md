@@ -13,6 +13,12 @@
 | **Website** | https://github.com/TechieGoku2623/semantic-drift-vector-watchdog |
 | **Topics** | `python` `asyncio` `machine-learning` `embeddings` `drift-detection` `generative-ai` |
 
+## The problem this solves
+
+An embedding stream can leave its baseline while every individual vector still looks well formed. A model swap, a bad batch, or a slow shift in prompts changes the geometry.
+
+Semantic Drift Vector Watchdog keeps an online centroid with Welford's method in 32 dimensions. Each window is scored with cosine distance and L2 distance. A two-sided CUSUM declares drift only after the evidence accumulates, so one odd vector does not page anyone. A zero vector raises, because it has no direction to compare. Distances, both CUSUM arms, and the drift flag are published on `genai.embeddings.window`.
+
 ## Walkthrough
 
 ### How it works

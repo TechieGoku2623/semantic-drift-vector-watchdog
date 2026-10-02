@@ -1,0 +1,3 @@
+# Python 3.12 standard library only.
+# The score path does not import third-party packages.
+# `pip install -r requirements.txt` is the supported install step.
